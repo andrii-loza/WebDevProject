@@ -1,0 +1,31 @@
+
+
+table{
+  border-collapse: collapse;
+}
+td{
+  border: 1px solid black;
+  padding: 5px 15px;
+}
+
+.remove{
+  cursor: pointer;
+} 
+
+.flag{
+  color: red;
+  // font-size: 1.25em;
+}
+
+// git checkout -b "AC-3"
+// AC-2 => develop
+// AC-3 => develop 
+
+// main => todo   in-progress       in test    done  
+//         AC-2 -> AC-2 ->commit =>push     merge
+//         AC-3 -> AC-3
+//         AC-5
+
+// .redMotion{
+//   background-color: blue;
+// }

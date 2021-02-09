@@ -1,0 +1,35 @@
+<label>Show Table:</label>
+<input type="checkbox" (change)="changeStatus()" [checked]="isShowTable" />
+
+<br />
+<br />
+<br />
+<table *ngIf="isShowTable">
+  <thead>
+    <tr>
+      <td>№</td>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Email</td>
+      <td>Phone</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let user of users; let i = index"
+      [ngClass]="{ flag: user.flagged }"
+    >
+      <td>{{ i + 1 }}</td>
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.phone }}</td>
+      <td class="remove" (click)="remove(i)">
+        <span class="material-icons"> remove_circle </span>
+      </td>
+      <td class="remove" (click)="flagUser(i)">
+        <span class="material-icons"> assistant_photo </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
