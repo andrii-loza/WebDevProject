@@ -8,25 +8,25 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class NewUserComponent implements OnInit {
 
-  firstName: string ='';
-  lastName: string ='';
-  email: string ='';
-  phone: string ='';
-  address: string = '';
+  firstName = '';
+  lastName = '';
+  email = '';
+  phone = '';
+  address = '';
 
   constructor(public userService: UsersService) { }
 
   ngOnInit(): void {
   }
 
-  create() {
-    let userObj = {
+  create(): void {
+    const userObj = {
       firstName: this.firstName,
       lastName: this.lastName,
       email: this.email,
       phone: this.phone,
       address: this.address
-    }
+    };
 
     this.userService.addNewUser(userObj);
   }
