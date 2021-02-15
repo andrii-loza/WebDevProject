@@ -1,64 +1,65 @@
-<div class="wrapper">
-    <div class="nav-menu">
-        NAV
+<mat-card *ngFor='let info of user'>
+    <div class="leftInfo">
+        <div class="photo">
+            PHOTO
+        </div>
+        <mat-card-title>{{info.firstName}} {{info.lastName}}</mat-card-title>
+        <div>
+            <mat-card-subtitle>{{info.city}}, {{info.country}} {{info.timezone}}</mat-card-subtitle>
+            <ul>
+                <li *ngFor="let link of info.links | keyvalue" class="link">
+                    <span class="material-icons">sports_motorsports</span> {{link.value}}
+                </li>
+            </ul>
+            <button mat-flat-button color='primary'>Hire {{info.firstName}}</button>
+        </div>
     </div>
-    <div>
-        <mat-card *ngFor='let info of user'>
-            <div class="leftInfo">
-                <div class="photo">
-                    PHOTO
-                </div>
-                <mat-card-title>{{info.firstName}} {{info.lastName}}</mat-card-title>
-                <div>
-                    <mat-card-subtitle>{{info.city}}, {{info.country}} {{info.timezone}}</mat-card-subtitle>
-                    <ul>
-                        <li *ngFor="let link of info.links | keyvalue" class="link">
-                            <span class="material-icons">sports_motorsports</span> {{link.value}}
-                        </li>
-                    </ul>
-                    <button mat-flat-button color='primary'>Hire {{info.firstName}}</button>
-                </div>
+    <div class="rightInfo">
+        <header>
+            <div>
+                <mat-card-subtitle>Rate</mat-card-subtitle>
+                <mat-card-title>${{info.rate}}/h</mat-card-title>
             </div>
-            <div class="rightInfo">
-                <header>
-                    <div>
-                        <mat-card-subtitle>Rate</mat-card-subtitle>
-                        <mat-card-title>${{info.rate}}/h</mat-card-title>
-                    </div>
-                    <div>
-                        <mat-card-subtitle>Works hours limit</mat-card-subtitle>
-                        <mat-card-title>{{info.works_hours_limit}}h/week</mat-card-title>
-                    </div>
-                    <div>
-                        <mat-card-subtitle>Jinn score</mat-card-subtitle>
-                        <mat-card-title>{{info.jinn_score}}</mat-card-title>
-                    </div>
-                </header>
-                <div class="skills">
-                    <mat-card-subtitle>Skills</mat-card-subtitle>
-                    <app-skills></app-skills>
-                </div>
-                <footer>
-                    <mat-card-subtitle>Payment Method</mat-card-subtitle>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="#"><div>PayPal</div></a> 
-        
-                            </li>
-                            <li>
-                                <a href="#"><div>Bank <br> Transfer</div> </a> 
-                            </li>
-                            <li>
-                                <a href="#"><div>Skrill</div> </a>
-                            </li>
-                            <li>
-                                <a href="#"><div>WESTERN <br> UNION</div> </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </footer>
+            <div>
+                <mat-card-subtitle>Works hours limit</mat-card-subtitle>
+                <mat-card-title>{{info.works_hours_limit}}h/week</mat-card-title>
             </div>
-        </mat-card>
+            <div>
+                <mat-card-subtitle>Jinn score</mat-card-subtitle>
+                <mat-card-title>{{info.jinn_score}}</mat-card-title>
+            </div>
+        </header>
+        <div class="skills">
+            <mat-card-subtitle>Skills</mat-card-subtitle>
+            <app-skills></app-skills>
+        </div>
+        <footer>
+            <mat-card-subtitle>Payment Method</mat-card-subtitle>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p class="pay">PayPal</p>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p class="pay">Bank <br> Transfer</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p class="pay">Skrill</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p class="pay">WESTERN <br> UNION</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
     </div>
-</div>
+</mat-card>

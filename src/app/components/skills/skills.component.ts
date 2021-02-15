@@ -27,7 +27,7 @@ export class SkillsComponent implements OnInit {
   }
 
   addSkill(skill: string): void {
-    if (!skill) {
+    if (skill) {
       this.skillService.addSkills(skill);
       this.getSkills();
       this.skill = '';

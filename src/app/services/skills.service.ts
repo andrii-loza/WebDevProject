@@ -18,7 +18,7 @@ export class SkillsService {
   }
 
   addSkills(skill: string): void {
-    this.skills.push({ skill, isActive: true });
+    this.skills.push({ skill, isActive: false });
   }
 
   rotateSkills(skills: string[]): void {
