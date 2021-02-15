@@ -1,18 +1,5 @@
 import { Injectable } from '@angular/core';
-
-interface User {
-  firstName: string;
-  lastName: string;
-  email?: string;
-  phone?: string;
-  address?: string | UserAddress;
-  flagged?: boolean;
-}
-
-interface UserAddress {
-  street: string;
-  numberOfHouse: number;
-}
+import {User} from '../interfaces ';
 
 @Injectable({
   providedIn: 'root'
