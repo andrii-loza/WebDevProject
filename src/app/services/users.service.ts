@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import {User} from '../interfaces ';
+// import {User} from '../interfaces ';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
 
-  users: User[] = [
+  users: any[] = [
     {
       firstName: 'Andrii',
       lastName: 'Petrov',
@@ -25,11 +25,11 @@ export class UsersService {
   constructor() { }
 
 
-  getUsers(): User[] {
+  getUsers(): any[] {
     return this.users;
   }
 
-  addNewUser(user: User): void {
+  addNewUser(user: any): void {
     this.users.push(user);
     console.log('User is created');
   }
