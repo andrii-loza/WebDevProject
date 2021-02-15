@@ -8,7 +8,7 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class UsersComponent implements OnInit {
 
-  isShowTable: boolean = true;
+  isShowTable = true;
   users: any[] = [];
   constructor(public userService: UsersService) { }
 
@@ -16,15 +16,15 @@ export class UsersComponent implements OnInit {
     this.users = this.userService.getUsers();
   }
 
-  changeStatus() {
+  changeStatus(): void {
     this.isShowTable = !this.isShowTable;
   }
 
-  remove(i: number) {
+  remove(i: number): void {
     this.userService.removeUser(i);
   }
 
-  flagUser(i: number) { 
+  flagUser(i: number): void {
     this.userService.flagUser(i);
   }
 

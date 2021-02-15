@@ -7,7 +7,7 @@ interface User {
   phone?: string;
   address?: string | UserAddress;
   flagged?: boolean;
-} 
+}
 
 interface UserAddress {
   street: string;
@@ -24,11 +24,11 @@ export class UsersService {
       firstName: 'Andrii',
       lastName: 'Petrov',
       email: 'andrii@email.com',
-    }, 
+    },
     {
       firstName: 'Petro',
       lastName: 'Ivanow'
-    }, 
+    },
     {
       firstName: 'Ostap',
       lastName: 'Bender',
@@ -38,20 +38,20 @@ export class UsersService {
   constructor() { }
 
 
-  getUsers() {
+  getUsers(): User[] {
     return this.users;
   }
 
-  addNewUser(user: User) {    
+  addNewUser(user: User): void {
     this.users.push(user);
     console.log('User is created');
   }
 
-  removeUser(i: number) {
+  removeUser(i: number): void {
     this.users.splice(i, 1);
   }
 
-  flagUser(i: number) {
+  flagUser(i: number): void {
     this.users[i].flagged = true;
   }
 }

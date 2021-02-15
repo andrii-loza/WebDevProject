@@ -12,19 +12,28 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SkillsComponent } from './components/skills/skills.component';
 import { MatIconModule } from '@angular/material/icon';
+import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     NewUserComponent,
+    NavMenuComponent,
+    NewUserComponent,
     SkillsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, BrowserAnimationsModule,
-    MatButtonModule, MatInputModule, MatFormFieldModule, MatIconModule
+    FormsModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
