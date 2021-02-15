@@ -25,7 +25,7 @@ export class SkillsComponent implements OnInit {
   }
   addSkill(skill: string) {
     if (skill != '') {
-      this.skillService.addSkills(skill);
+      this.skillService.addSkill(skill);
       this.getSkills();
       this.skill = '';
       this.isShowInput = false;
@@ -33,6 +33,9 @@ export class SkillsComponent implements OnInit {
   }
   changeActive(i: number) {
     this.skills[i].isActive = !this.skills[i].isActive
-    // this.btnColor = this.skills[i].isActive ? 'primary' : 'basic';
+  }
+  cancel() {
+    this.skill = '';
+    this.isShowInput = false;
   }
 }
