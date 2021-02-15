@@ -8,33 +8,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
   skills: any[] = [];
-  skill: string = '';
-  isShowInput: boolean = false;
-  btnColor: string = 'basic'
+  skill = '';
+  isShowInput = false;
+  btnColor = 'basic';
 
   constructor(private skillService: SkillsService) { }
 
   ngOnInit(): void {
     this.getSkills();
   }
-  getSkills() {
+
+  getSkills(): void {
     this.skills = this.skillService.getSkills();
   }
-  showInput() {
+
+  showInput(): void {
     this.isShowInput = true;
   }
-  addSkill(skill: string) {
-    if (skill != '') {
-      this.skillService.addSkill(skill);
+
+  addSkill(skill: string): void {
+    if (!skill) {
+      this.skillService.addSkills(skill);
       this.getSkills();
       this.skill = '';
       this.isShowInput = false;
     }
   }
-  changeActive(i: number) {
-    this.skills[i].isActive = !this.skills[i].isActive
+
+  changeActive(i: number): void {
+    this.skills[i].isActive = !this.skills[i].isActive;
+    // this.btnColor = this.skills[i].isActive ? 'primary' : 'basic';
   }
-  cancel() {
+
+  cancel(): void {
     this.skill = '';
     this.isShowInput = false;
   }

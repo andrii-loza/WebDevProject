@@ -9,19 +9,22 @@ interface SkillsData {
   providedIn: 'root'
 })
 export class SkillsService {
-  skills: SkillsData[] = [{ skill: 'C++', isActive: false }]
+  skills: SkillsData[] = [{ skill: 'C++', isActive: false }];
   constructor() {
   }
+
   getSkills(): SkillsData[] {
     return this.skills;
   }
-  addSkill(skill: string) {
-    this.skills.push({ skill: skill, isActive: false })
+
+  addSkills(skill: string): void {
+    this.skills.push({ skill, isActive: true });
   }
-  rotateSkills(skills: string[]) {
+
+  rotateSkills(skills: string[]): void {
     this.skills = [];
     for (const skill of skills) {
-      this.skills.push({ skill: skill, isActive: false })
+      this.skills.push({ skill, isActive: false });
     }
   }
 }
