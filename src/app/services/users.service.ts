@@ -1,34 +1,21 @@
 import { Injectable } from '@angular/core';
-
-interface User {
-  firstName: string;
-  lastName: string;
-  email?: string;
-  phone?: string;
-  address?: string | UserAddress;
-  flagged?: boolean;
-} 
-
-interface UserAddress {
-  street: string;
-  numberOfHouse: number;
-}
+// import {User} from '../interfaces ';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
 
-  users: User[] = [
+  users: any[] = [
     {
       firstName: 'Andrii',
       lastName: 'Petrov',
       email: 'andrii@email.com',
-    }, 
+    },
     {
       firstName: 'Petro',
       lastName: 'Ivanow'
-    }, 
+    },
     {
       firstName: 'Ostap',
       lastName: 'Bender',
@@ -38,20 +25,20 @@ export class UsersService {
   constructor() { }
 
 
-  getUsers() {
+  getUsers(): any[] {
     return this.users;
   }
 
-  addNewUser(user: User) {    
+  addNewUser(user: any): void {
     this.users.push(user);
     console.log('User is created');
   }
 
-  removeUser(i: number) {
+  removeUser(i: number): void {
     this.users.splice(i, 1);
   }
 
-  flagUser(i: number) {
+  flagUser(i: number): void {
     this.users[i].flagged = true;
   }
 }
