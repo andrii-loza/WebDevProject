@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
 import { NewUserComponent } from './components/new-user/new-user.component';
+import { TodoComponent } from './components/todo/todo.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SkillsComponent } from './components/skills/skills.component';
@@ -20,6 +21,8 @@ import { HomeComponent } from './components/home/home.component';
   declarations: [
     AppComponent,
     UsersComponent,
+    NewUserComponent,
+    TodoComponent,
     NewUserComponent,
     NavMenuComponent,
     NewUserComponent,
