@@ -1,24 +1,5 @@
 import { Injectable } from '@angular/core';
-
-interface TodoUser{
-  global: string | TodoUserInfo;
-  skills: string | TodoUserSkills;
-  rate: string;
-  work: string;
-  score: number;
-}
-
-interface TodoUserInfo{
-  name: string;
-  location?: string;
-}
-
-interface TodoUserSkills{
-  angular?: string;
-  react?: string;
-  net?: string;
-  more?: string;
-}
+import {TodoUser} from '../interfaces';
 
 @Injectable({
   providedIn: 'root'

@@ -1,6 +1,9 @@
-import {User, UserAddress} from './user';
+import {User, UserAddress, TodoUser, TodoUserInfo, TodoUserSkills} from './user';
 
 export {
   User,
-  UserAddress
+  UserAddress,
+  TodoUserInfo,
+  TodoUserSkills,
+  TodoUser
 };
