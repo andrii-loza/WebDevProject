@@ -1,6 +1,5 @@
 .main{
   width: 50%;
-  margin: auto;
 
   div{
     width: 50%;
@@ -8,4 +7,18 @@
     justify-content: space-between;
     margin-bottom: 10px;
   }
+}
+
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: gray;
+}
+
+input{
+  
+}
+
+input[type="text"]:focus {
+  color: #347be7;
+  border: 1px solid #3084f1
 }

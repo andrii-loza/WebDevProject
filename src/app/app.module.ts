@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
 import { NewUserComponent } from './components/new-user/new-user.component';
 import {FormsModule} from '@angular/forms';
+import { TodoComponent } from './components/todo/todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    NewUserComponent
+    NewUserComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
