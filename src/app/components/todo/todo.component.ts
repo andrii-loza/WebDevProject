@@ -8,12 +8,12 @@ import { TodoUsersService } from 'src/app/services/todo-users.service';
 })
 export class TodoComponent implements OnInit {
 
-  constructor(public TodoUsersService: TodoUsersService) { }
+  constructor(public todoUsersService: TodoUsersService) { }
 
   todoUsers: any[] = [];
 
   ngOnInit(): void {
-    this.todoUsers = this.TodoUsersService.getTodoUsers();
+    this.todoUsers = this.todoUsersService.getTodoUsers();
   }
 
 }

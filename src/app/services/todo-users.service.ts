@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
 
-interface todoUser{
-  global: string | todoUserInfo;
-  skills: string | todoUserSkills;
+interface TodoUser{
+  global: string | TodoUserInfo;
+  skills: string | TodoUserSkills;
   rate: string;
   work: string;
   score: number;
 }
 
-interface todoUserInfo{
+interface TodoUserInfo{
   name: string;
   location?: string;
 }
 
-interface todoUserSkills{
+interface TodoUserSkills{
   angular?: string;
   react?: string;
   net?: string;
@@ -26,7 +26,7 @@ interface todoUserSkills{
 
 export class TodoUsersService {
 
-  todoUsers: todoUser[] = [
+  todoUsers: TodoUser[] = [
     {
       global: {
         name: 'Minnie Ferguson',
@@ -45,7 +45,7 @@ export class TodoUsersService {
     {
       global: {
         name: 'Calleb Castillo',
-        location: 'Pjiladelphia, Bangladesh' 
+        location: 'Pjiladelphia, Bangladesh',
       },
       skills: {
         angular: 'Angular JS',
@@ -102,11 +102,11 @@ export class TodoUsersService {
       work: '18 Hours/week',
       score: 98765
     }
-  ]
+  ];
 
   constructor() { }
 
-  getTodoUsers() {
+  getTodoUsers(): TodoUser[] {
     return this.todoUsers;
-  } 
+  }
 }
