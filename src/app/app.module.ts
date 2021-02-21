@@ -15,7 +15,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { MatIconModule } from '@angular/material/icon';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HomeComponent } from './components/home/home.component';
-
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { HomeComponent } from './components/home/home.component';
     NavMenuComponent,
     NewUserComponent,
     SkillsComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,9 +39,9 @@ import { HomeComponent } from './components/home/home.component';
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

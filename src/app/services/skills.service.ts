@@ -6,12 +6,19 @@ interface SkillsData {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SkillsService {
-  skills: SkillsData[] = [{ skill: 'C++', isActive: true }];
-  constructor() {
-  }
+  skills: SkillsData[] = [
+    { skill: 'C++', isActive: true },
+    { skill: 'Wordpress', isActive: true },
+    { skill: 'Java', isActive: true },
+    { skill: 'Angular JS', isActive: true },
+    { skill: 'React', isActive: true },
+    { skill: 'HTML/CSS', isActive: true },
+    { skill: 'PHP', isActive: true },
+  ];
+  constructor() {}
   getSkills(): SkillsData[] {
     return this.skills;
   }

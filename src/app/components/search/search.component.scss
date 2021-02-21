@@ -1,0 +1,23 @@
+
+
+.wrapper {
+    border: 2px solid black;
+}
+
+mat-form-field {
+    display: flex;
+    width: 500px;
+
+    //  .mat-form-field-appearance-outline .mat-form-field-suffix {
+    //     top: -4px;
+    //     right: 56px;
+    // }
+        input {
+            display: inline-block !important;
+        }
+    
+    button[mat-flat-button] {
+        // margin-right: 300px;
+        display: inline-block !important;
+    }
+}

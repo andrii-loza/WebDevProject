@@ -35,8 +35,9 @@ export class SkillsComponent implements OnInit {
     }
   }
 
-  changeActive(i: number): void {
+  skillSearch(i: number): void {
     this.skills[i].isActive = !this.skills[i].isActive;
-    // this.btnColor = this.skills[i].isActive ? 'primary' : 'basic';
   }
+
+  
 }

@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <h1>Directory Search</h1>
+  <mat-form-field appearance="outline">
+    <mat-label>Search</mat-label>
+    <input matInput placeholder="Enter name" [(ngModel)]="searchValue" />
+
+    <button mat-flat-button color="primary" (click)="search()">Search</button>
+  </mat-form-field>
+
+  <app-skills></app-skills>
+  <app-todo></app-todo>
+</div>
