@@ -1,12 +1,10 @@
 .menu {
    font-family: "Roboto", sans-serif;
    width: 20%;
-   margin: 0px 10px 0 15px;
-   padding: 30px 0;
 
    &__item a:hover {
       color: rgb(92, 148, 252);
-      border-left: 3px solid rgb(92, 148, 252);
+      border-left: 5px solid rgb(92, 148, 252);
       border-radius: 4px;
    }
 
@@ -28,8 +26,6 @@
    &__icon {
       margin-right: 25px;
    }
-
-   /*  Style active link */
 
    .active {
       color: rgb(92, 148, 252);
