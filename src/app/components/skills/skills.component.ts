@@ -27,7 +27,7 @@ export class SkillsComponent implements OnInit {
   }
 
   addSkill(skill: string): void {
-    if (!skill) {
+    if (skill) {
       this.skillService.addSkills(skill);
       this.getSkills();
       this.skill = '';
@@ -38,5 +38,10 @@ export class SkillsComponent implements OnInit {
   changeActive(i: number): void {
     this.skills[i].isActive = !this.skills[i].isActive;
     // this.btnColor = this.skills[i].isActive ? 'primary' : 'basic';
+  }
+
+  cancel(): void {
+    this.skill = '';
+    this.isShowInput = false;
   }
 }

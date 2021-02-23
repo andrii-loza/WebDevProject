@@ -1,6 +1,11 @@
-button{
+button {
     margin: 15px 20px 5px 0;
 }
-.material-icons{
+.material-icons {
     cursor: pointer;
+}
+.not-active-btn {
+    background-color: rgb(239, 246, 255);
+    color: rgb(132, 184, 252);
+    border: 1px rgb(239, 246, 255) solid;
 }

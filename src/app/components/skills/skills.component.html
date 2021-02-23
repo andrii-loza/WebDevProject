@@ -1,19 +1,20 @@
-<ng-container *ngFor = 'let skill of skills; let i = index'>
-    <button mat-stroked-button color='basic' *ngIf='skill.isActive'
-        (click) = 'changeActive(i)'>
+<ng-container *ngFor='let skill of skills; let i = index'>
+    <button mat-raised-button color='primary' *ngIf='skill.isActive' (click)='changeActive(i)'>
         {{skill.skill}}
     </button>
-    <button mat-raised-button color='primary' *ngIf='!skill.isActive'
-        (click) = 'changeActive(i)'>
+    <button mat-stroked-button color='basic' *ngIf='!skill.isActive' class="not-active-btn" (click)='changeActive(i)'>
         {{skill.skill}}
     </button>
 </ng-container>
 
-<button mat-stroked-button color='basic' (click) = 'showInput()'>
+<button mat-stroked-button color='basic' (click)='showInput()'>
     <span class="material-icons"> add </span>
 </button>
-<mat-form-field appearance="outline"  [style.display]=" isShowInput ?'inline-block':'none'">
+<mat-form-field appearance="outline" [style.display]=" isShowInput ?'inline-block':'none'">
     <mat-label>Add skill</mat-label>
-    <input matInput placeholder="Enter new skill" [(ngModel)] = 'skill'>
-    <mat-icon matSuffix class="material-icons" (click) = addSkill(skill)>check_circle_outline</mat-icon>
+    <input matInput placeholder="Enter new skill" [(ngModel)]='skill'>
+    <mat-icon matSuffix class="material-icons" (click)=addSkill(skill) style="display: inline-block;">
+        check_circle_outline</mat-icon>
+    <mat-icon matSuffix class="material-icons" (click)=cancel() style="display: inline-block;">
+        cancel</mat-icon>
 </mat-form-field>

@@ -1,0 +1,68 @@
+<mat-card *ngFor='let info of user'>
+    <div class="leftInfo">
+        <div class="photo">
+            PHOTO
+        </div>
+        <mat-card-title>{{info.firstName}} {{info.lastName}}</mat-card-title>
+        <div>
+            <mat-card-subtitle>{{info.city}}, {{info.country}} {{info.timezone}}</mat-card-subtitle>
+            <ul>
+                <li *ngFor="let link of info.links | keyvalue" class="link">
+                    <span class="material-icons">sports_motorsports</span> {{link.value}}
+                </li>
+            </ul>
+            <button mat-flat-button color='primary'>Hire {{info.firstName}}</button>
+        </div>
+    </div>
+    <div class="rightInfo">
+        <header>
+            <div>
+                <mat-card-subtitle>Rate</mat-card-subtitle>
+                <mat-card-title>${{info.rate}}/h</mat-card-title>
+            </div>
+            <div>
+                <mat-card-subtitle>Works hours limit</mat-card-subtitle>
+                <mat-card-title>{{info.works_hours_limit}}h/week</mat-card-title>
+            </div>
+            <div>
+                <mat-card-subtitle>Jinn score</mat-card-subtitle>
+                <mat-card-title>{{info.jinn_score}}</mat-card-title>
+            </div>
+        </header>
+        <div class="skills">
+            <mat-card-subtitle>Skills</mat-card-subtitle>
+            <app-skills></app-skills>
+        </div>
+        <footer>
+            <mat-card-subtitle>Payment Method</mat-card-subtitle>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://www.paypal.com/ru/home">
+                            <img src="https://easyxpress.com.ua/uploads/0/598-paypal-galactic-feature%5B1%5D.jpg"
+                                alt="PayPal" class="pay">
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://cabgrid.com/wp-content/uploads/2018/06/bank_trasfer-EFT-1.png"
+                                alt="Bank Transfer" class="pay">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.skrill.com/en/">
+                            <img src="https://st1.prosto.im/cache/st1/8/2/1/5/82157/82157.jpg" alt="Skrill" class="pay">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.westernunion.ru/ru/ru/home.html">
+                            <img src="https://globus.com.ua/wp-content/uploads/2015/03/Western-Union.jpg"
+                                alt="Western Union" class="pay">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</mat-card>
