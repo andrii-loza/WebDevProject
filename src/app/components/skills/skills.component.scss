@@ -1,6 +1,17 @@
-button{
+button {
     margin: 15px 20px 5px 0;
+    font-family: "Barlow", sans-serif;
 }
-.material-icons{
+.material-icons {
     cursor: pointer;
+    font-family: "Material Icons";
+}
+.wrapper {
+    color: gray;
+    margin-bottom: 30px;
+    h4 {
+        font-family: "Barlow", sans-serif;
+        font-weight: 600;
+        margin: 0;
+    }
 }

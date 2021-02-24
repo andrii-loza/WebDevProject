@@ -8,11 +8,12 @@ import { TodoUsersService } from 'src/app/services/todo-users.service';
 })
 export class SearchComponent implements OnInit {
   searchValue = '';
-  constructor(private todoUsersService: TodoUsersService) {}
+  constructor(private todoUsersService: TodoUsersService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
-  search(): void {
-    this.todoUsersService.setTodoUsers(this.searchValue);
+  searchName(): void {
+    this.todoUsersService.searchName(this.searchValue);
   }
 }

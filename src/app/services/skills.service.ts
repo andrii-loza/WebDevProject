@@ -1,29 +1,25 @@
+import { SkillsData } from './../interfaces/skill';
 import { Injectable } from '@angular/core';
-
-interface SkillsData {
-  skill: string;
-  isActive: boolean;
-}
 
 @Injectable({
   providedIn: 'root',
 })
 export class SkillsService {
   skills: SkillsData[] = [
-    { skill: 'C++', isActive: true },
-    { skill: 'Wordpress', isActive: true },
-    { skill: 'Java', isActive: true },
-    { skill: 'Angular JS', isActive: true },
-    { skill: 'React', isActive: true },
-    { skill: 'HTML/CSS', isActive: true },
-    { skill: 'PHP', isActive: true },
+    { skill: 'C++', isActive: false },
+    { skill: 'Wordpress', isActive: false },
+    { skill: 'Java', isActive: false },
+    { skill: 'Angular JS', isActive: false },
+    { skill: 'React', isActive: false },
+    { skill: 'HTML/CSS', isActive: false },
+    { skill: 'PHP', isActive: false },
   ];
-  constructor() {}
+  constructor() { }
   getSkills(): SkillsData[] {
     return this.skills;
   }
 
-  addSkills(skill: string): void {
-    this.skills.push({ skill, isActive: true });
+  addSkills(newSkill: string): void {
+    this.skills.push({ skill: newSkill, isActive: false });
   }
 }

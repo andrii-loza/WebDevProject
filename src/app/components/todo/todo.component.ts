@@ -1,4 +1,5 @@
-import { Component, OnChanges, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TodoUser } from 'src/app/interfaces';
 import { TodoUsersService } from 'src/app/services/todo-users.service';
 
 @Component({
@@ -6,16 +7,13 @@ import { TodoUsersService } from 'src/app/services/todo-users.service';
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.scss'],
 })
-export class TodoComponent implements OnInit, OnChanges {
-  constructor(public todoUsersService: TodoUsersService) {}
+export class TodoComponent implements OnInit {
+  constructor(public todoUsersService: TodoUsersService) { }
 
-  todoUsers: any[] = [];
-
-  ngOnChanges(): void {
-    this.todoUsers = this.todoUsersService.getTodoUsers();
-  }
+  todoUsers: TodoUser[] = [];
 
   ngOnInit(): void {
     this.todoUsers = this.todoUsersService.getTodoUsers();
+    this.todoUsersService.searchSubject.subscribe(todos => this.todoUsers = todos);
   }
 }

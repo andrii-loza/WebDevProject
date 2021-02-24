@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { TodoUser } from '../interfaces';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TodoUsersService {
+  searchSubject = new Subject<TodoUser[]>();
   todoUsers: TodoUser[] = [
     {
       global: {
@@ -82,12 +84,16 @@ export class TodoUsersService {
       score: 98765,
     },
   ];
-  searched = false;
   searchUsers: TodoUser[] = this.todoUsers.slice();
+  searchSkill: TodoUser[] = [];
 
-  constructor() {}
+  constructor() { }
 
-  setTodoUsers(value: string): void {
+  getTodoUsers(): TodoUser[] {
+    return this.todoUsers;
+  }
+
+  searchName(value: string): void {
     this.searchUsers = [];
 
     this.todoUsers.forEach((todo) => {
@@ -95,8 +101,20 @@ export class TodoUsersService {
         this.searchUsers.push(todo);
       }
     });
+    this.searchSubject.next(this.searchUsers);
   }
-  getTodoUsers(): TodoUser[] {
-    return this.searchUsers;
+
+  filterTodoUsers(skills: string[]): void {
+    this.searchSkill = this.searchUsers.slice();
+    let i = 0;
+    this.searchUsers.forEach(todo => {
+      i++;
+      skills.forEach(skill => {
+        if (!Object.values(todo.skills).some(filter => filter.toLowerCase() === skill.toLowerCase())) {
+          this.searchSkill.splice(--i, 1);
+        }
+      });
+    });
+    this.searchSubject.next(this.searchSkill);
   }
 }
