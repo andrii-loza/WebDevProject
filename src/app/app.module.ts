@@ -18,7 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { SignComponent } from './components/sign/sign.component';
-
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +31,8 @@ import { SignComponent } from './components/sign/sign.component';
     HomeComponent,
     ProfileComponent,
     SignComponent,
+    HomeComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,6 @@ import { SignComponent } from './components/sign/sign.component';
     MatCardModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

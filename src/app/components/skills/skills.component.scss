@@ -1,9 +1,21 @@
 button {
     margin: 15px 20px 5px 0;
+    font-family: "Barlow", sans-serif;
 }
 .material-icons {
     cursor: pointer;
+    font-family: "Material Icons";
 }
+.wrapper {
+    color: gray;
+    margin-bottom: 30px;
+    h4 {
+        font-family: "Barlow", sans-serif;
+        font-weight: 600;
+        margin: 0;
+    }
+}
+
 .not-active-btn {
     background-color: rgb(239, 246, 255);
     color: rgb(132, 184, 252);

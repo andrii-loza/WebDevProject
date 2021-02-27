@@ -1,0 +1,26 @@
+.wrapper {
+    margin: 30px 30px 0 0;
+    width: 75vw;
+    h1 {
+        font-weight: 500;
+    }
+    mat-form-field {
+        width: 100%;
+        input {
+            font-family: "Barlow", sans-serif;
+        }
+        mat-icon {
+            width: auto;
+            button {
+                height: 42px;
+                bottom: 8px;
+                left: 5px;
+                padding: 0 20px 0 30px;
+                font-family: "Barlow", sans-serif;
+            }
+        }
+        .material-icons {
+            margin-left: 20px;
+        }
+    }
+}

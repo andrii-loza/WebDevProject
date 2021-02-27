@@ -12,20 +12,20 @@ export interface UserAddress {
   numberOfHouse: number;
 }
 
-export interface TodoUser{
-  global: string | TodoUserInfo;
-  skills: string | TodoUserSkills;
+export interface TodoUser {
+  global: TodoUserInfo;
+  skills: TodoUserSkills;
   rate: string;
   work: string;
   score: number;
 }
 
-export interface TodoUserInfo{
+export interface TodoUserInfo {
   name: string;
   location?: string;
 }
 
-export interface TodoUserSkills{
+export interface TodoUserSkills {
   angular?: string;
   react?: string;
   net?: string;

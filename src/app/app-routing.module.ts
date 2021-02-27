@@ -1,4 +1,3 @@
-import { SignComponent } from './components/sign/sign.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UsersComponent } from './components/users/users.component';
@@ -6,8 +5,10 @@ import { NewUserComponent } from './components/new-user/new-user.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { HomeComponent } from './components/home/home.component';
+import { SearchComponent } from './components/search/search.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuard } from './auth.guard';
+import { SignComponent } from './components/sign/sign.component';
 
 const routes: Routes = [
   { path: 'home', canActivate: [AuthGuard], component: HomeComponent },
@@ -17,8 +18,7 @@ const routes: Routes = [
   { path: 'skills', canActivate: [AuthGuard], component: SkillsComponent },
   { path: 'profile', canActivate: [AuthGuard], component: ProfileComponent },
   { path: 'todo-users', canActivate: [AuthGuard], component: TodoComponent },
-
-
+  { path: 'search', component: SearchComponent },
 ];
 
 @NgModule({
