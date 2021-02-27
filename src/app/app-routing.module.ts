@@ -7,7 +7,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './guards/auth.guard';
 import { SignComponent } from './components/sign/sign.component';
 
 const routes: Routes = [
@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'skills', canActivate: [AuthGuard], component: SkillsComponent },
   { path: 'profile', canActivate: [AuthGuard], component: ProfileComponent },
   { path: 'todo-users', canActivate: [AuthGuard], component: TodoComponent },
-  { path: 'search', component: SearchComponent },
+  { path: 'search', canActivate: [AuthGuard], component: SearchComponent },
 ];
 
 @NgModule({

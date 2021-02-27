@@ -14,11 +14,11 @@ export class AuthGuard implements CanActivate {
       if (user.email === 'admin' && user.password === 'admin') {
         return true;
       } else {
-        this.router.navigate([''])
+        this.router.navigate(['']);
         return false;
       }
     } else {
-      this.router.navigate([''])
+      this.router.navigate(['']);
       return false;
     }
   }
