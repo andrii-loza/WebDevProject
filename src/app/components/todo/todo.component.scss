@@ -1,48 +1,51 @@
-table{
+.wrapper {
+    display: flex;
+}
+table {
     width: 100%;
     border: 1px solid lightgray;
     border-radius: 3px;
     border-collapse: collapse;
 
-    thead{
+    thead {
         font-size: 18px;
     }
 
-    tr{
+    tr {
         border: 1px solid lightgray;
         border-radius: 3px;
         width: 100%;
     }
 
-    td{
+    td {
         padding: 25px;
         color: gray;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 500;
     }
 }
 
-#score{
+#score {
     font-weight: 500;
     color: black;
 }
 
-#rate{
+#rate {
     color: rgb(0, 153, 255);
 }
 
-#skills{
+#skills {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-#skills a{
+#skills a {
     text-decoration: none;
     color: gray;
 }
 
-#skills span{
+#skills span {
     color: rgb(0, 153, 255);
     padding: 8px;
     background-color: rgb(240, 248, 255);
@@ -50,27 +53,26 @@ table{
     margin-right: 10px;
 }
 
-#global{
+#global {
     display: flex;
     align-items: center;
 }
 
-#global_title{
+#global_title {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
 
-    span:nth-child(1){
+    span:nth-child(1) {
         color: black;
     }
 
-    span:nth-child(2){
+    span:nth-child(2) {
         font-size: 12px;
     }
 }
 
-#global_img img{
+#global_img img {
     width: 40px;
     border-radius: 100%;
 }
-
