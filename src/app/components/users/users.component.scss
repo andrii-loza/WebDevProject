@@ -1,47 +1,47 @@
-label{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
-  color: gray;
-}
+// label{
+//   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//   font-size: 20px;
+//   color: gray;
+// }
 
-table{
-    width: 100%;
-    border: 1px solid lightgray;
-    border-radius: 3px;
-    border-collapse: collapse;
+// table{
+//     width: 100%;
+//     border: 1px solid lightgray;
+//     border-radius: 3px;
+//     border-collapse: collapse;
 
-    thead{
-        font-size: 18px;
-    }
+//     thead{
+//         font-size: 18px;
+//     }
 
-    tr{
-        border: 1px solid lightgray;
-        border-radius: 3px;
-        width: 100%;
-    }
+//     tr{
+//         border: 1px solid lightgray;
+//         border-radius: 3px;
+//         width: 100%;
+//     }
 
-    td{
-        padding: 25px;
-        color: gray;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-weight: 500;
-    }
-}
+//     td{
+//         padding: 25px;
+//         color: gray;
+//         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//         font-weight: 500;
+//     }
+// }
 
-.remove{
-  cursor: pointer;
-} 
+// .remove{
+//   cursor: pointer;
+// }
 
-.flag{
-  color: red;
-  // font-size: 1.25em;
-}
+// .flag{
+//   color: red;
+//   // font-size: 1.25em;
+// }
 
 // git checkout -b "AC-3"
 // AC-2 => develop
-// AC-3 => develop 
+// AC-3 => develop
 
-// main => todo   in-progress       in test    done  
+// main => todo   in-progress       in test    done
 //         AC-2 -> AC-2 ->commit =>push     merge
 //         AC-3 -> AC-3
 //         AC-5
@@ -49,3 +49,6 @@ table{
 // .redMotion{
 //   background-color: blue;
 // }
+.wrapper {
+  display: flex;
+}
