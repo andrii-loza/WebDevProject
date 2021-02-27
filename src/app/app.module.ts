@@ -17,6 +17,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { MatIconModule } from '@angular/material/icon';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HomeComponent } from './components/home/home.component';
+import { SignComponent } from './components/sign/sign.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { HomeComponent } from './components/home/home.component';
     SkillsComponent,
     HomeComponent,
     ProfileComponent,
+    SignComponent,
   ],
   imports: [
     BrowserModule,

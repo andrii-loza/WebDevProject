@@ -1,0 +1,19 @@
+<div class="back">
+    <div class="wrapper">
+        <div class="green-decorate"></div>
+        <div class="content">
+            <h1>Log in</h1>
+            <p>Hello, friend! I'm Smarttime - task manager you <br> can trust everything. Let's get in touch!</p>
+            <form>
+                <input type="text" name="email" placeholder="Email" class="inp" [(ngModel)]='email'>
+                <input type="password" name="password" placeholder="Password" class="inp" [(ngModel)]='password'>
+                <a routerLink='/home' class="inp" (click)='logIn()'>Let's start!</a>
+            </form>
+            <form class="links">
+                <button><a href="https://www.facebook.com/" target="_blanc">f</a></button>
+                <button><a href="https://www.google.com/" target="_blanc" class="google">G</a></button>
+            </form>
+            <p>Don't have an account?<a href="#" class="sign-up">Sign up</a></p>
+        </div>
+    </div>
+</div>

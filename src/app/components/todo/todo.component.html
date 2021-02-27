@@ -1,35 +1,38 @@
-<table>
-    <thead>
-        <tr>
-            <td>Name & Location</td>
-            <td>Skills</td>
-            <td>Hourle Rate</td>
-            <td>Work per week</td>
-            <td>Jinn Score</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor = "let todoUsers of todoUsers">
-            <td id="global">
-                <div id="global_img">
-                    <img src="../assets/img/unnamed.jpg" alt="">
-                </div>
-                <div id="global_title">
-                    <span>{{todoUsers.global.name}}</span>
-                    <span>{{todoUsers.global.location}}</span>
-                </div>
-            </td>
-            <td>
-                <div id="skills">
-                    <span>{{todoUsers.skills.angular}}</span>
-                    <span>{{todoUsers.skills.react}}</span> 
-                    <span>{{todoUsers.skills.net}}</span> 
-                    <a>{{todoUsers.skills.more}}</a> 
-                </div>   
-            </td>
-            <td id="rate">{{todoUsers.rate}}</td>
-            <td id="work">{{todoUsers.work}}</td>
-            <td id="score">{{todoUsers.score}}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="wrapper">
+    <app-nav-menu></app-nav-menu>
+    <table>
+        <thead>
+            <tr>
+                <td>Name & Location</td>
+                <td>Skills</td>
+                <td>Hourle Rate</td>
+                <td>Work per week</td>
+                <td>Jinn Score</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let todoUsers of todoUsers">
+                <td id="global">
+                    <div id="global_img">
+                        <img src="../assets/img/unnamed.jpg" alt="">
+                    </div>
+                    <div id="global_title">
+                        <span>{{todoUsers.global.name}}</span>
+                        <span>{{todoUsers.global.location}}</span>
+                    </div>
+                </td>
+                <td>
+                    <div id="skills">
+                        <span>{{todoUsers.skills.angular}}</span>
+                        <span>{{todoUsers.skills.react}}</span>
+                        <span>{{todoUsers.skills.net}}</span>
+                        <a>{{todoUsers.skills.more}}</a>
+                    </div>
+                </td>
+                <td id="rate">{{todoUsers.rate}}</td>
+                <td id="work">{{todoUsers.work}}</td>
+                <td id="score">{{todoUsers.score}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
